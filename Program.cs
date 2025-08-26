@@ -19,6 +19,20 @@
         public string Title { get; } = title;
         public string Author { get; } = author;
         public int ISBN { get; } = isbn;
-        public bool IsBorrowed { get; set; } = isBorrowed;
+        public bool IsBorrowed { get; private set; } = isBorrowed;
+
+
+    }
+
+    public class User(string name, int userId, int borrowedBooks)
+    {
+        public string Name { get; } = name;
+        public int UserId { get; } = userId;
+        public int BorrowedBooks { get; set; } = borrowedBooks;
+    }
+
+    public class Library
+    {
+        public List<Book> Books { get; } = new List<Book>();
     }
 }
