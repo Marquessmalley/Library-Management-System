@@ -1,0 +1,14 @@
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/obj/Debug/net9.0/Library_Management_System.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/obj/Debug/net9.0/Library_Management_System.AssemblyInfoInputs.cache
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/obj/Debug/net9.0/Library_Management_System.AssemblyInfo.cs
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/obj/Debug/net9.0/Library_Management_System.csproj.CoreCompileInputs.cache
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/bin/Debug/net9.0/Library_Management_System
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/bin/Debug/net9.0/Library_Management_System.deps.json
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/bin/Debug/net9.0/Library_Management_System.runtimeconfig.json
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/bin/Debug/net9.0/Library_Management_System.dll
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/bin/Debug/net9.0/Library_Management_System.pdb
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/obj/Debug/net9.0/Library_Management_System.dll
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/obj/Debug/net9.0/refint/Library_Management_System.dll
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/obj/Debug/net9.0/Library_Management_System.pdb
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/obj/Debug/net9.0/Library_Management_System.genruntimeconfig.cache
+/Users/marquessmalley/Documents/developement/c#/consoleApp/Library_Management_System/obj/Debug/net9.0/ref/Library_Management_System.dll
