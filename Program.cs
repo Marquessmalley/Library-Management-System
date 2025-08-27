@@ -8,6 +8,7 @@
             Console.WriteLine("Welcome to the Library Management System!");
 
             Book book1 = new Book("Green Eggs & Ham", "Dr. Seuss", 123456, false);
+            Book book2 = new Book("The Hidden Gem", "John Doe", 6543231, false);
 
 
 
