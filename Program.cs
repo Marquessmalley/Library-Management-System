@@ -61,7 +61,25 @@ namespace LibrarayManagementSystem
                         Menu.DisplayMainMenu();
                         selectedOption = Console.ReadLine();
                         break;
+
                     case "6":
+                        Console.WriteLine("Returning user a book...\n");
+                        // Checking if there are atleast one user & book in the system.
+                        usersExists = Menu.UsersExists(library);
+                        booksExists = Menu.BooksExists(library);
+
+                        if (!usersExists || !booksExists)
+                        {
+                            Menu.DisplayMainMenu();
+                            selectedOption = Console.ReadLine();
+                            break;
+                        }
+
+                        library.ReturnUserBook(library.Users[0], library.Books[0]);
+                        Menu.DisplayMainMenu();
+                        selectedOption = Console.ReadLine();
+                        break;
+                    case "7":
                         Menu.DisplayExistingSystem();
                         break;
                     default:
@@ -71,7 +89,7 @@ namespace LibrarayManagementSystem
 
                         break;
                 }
-            } while (selectedOption != "6");
+            } while (selectedOption != "7");
 
 
             Menu.DisplayExistingSystem();

@@ -6,7 +6,7 @@ namespace LibraryManagementSystem.UI
     {
         public static void DisplayMainMenu()
         {
-            Console.WriteLine("Please select an option:\n1. Add Book\n2. Lists Books\n3. Register User\n4. List Users\n5. Lend user a book\n6. Exit\n");
+            Console.WriteLine("Please select an option:\n1. Add Book\n2. Lists Books\n3. Register User\n4. List Users\n5. Lend user a book\n6. Return User Book\n7. Exit System");
         }
 
         public static void DisplayExistingSystem()

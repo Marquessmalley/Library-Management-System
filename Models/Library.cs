@@ -109,6 +109,10 @@ namespace LibraryManagementSystem.Models
                 book.SetReturned();
                 user.BorrowedBooks.Remove(book);
             }
+            else
+            {
+                Console.WriteLine("User has no borrowed books to return.\n");
+            }
         }
 
         public void RemoveBook(Book book)
