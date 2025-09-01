@@ -6,7 +6,7 @@ namespace LibraryManagementSystem.UI
     {
         public static void DisplayMainMenu()
         {
-            Console.WriteLine("Please select an option:\n1. Add Book\n2. Lists Books\n3. Register User\n4. List Users\n5. Exist\n");
+            Console.WriteLine("Please select an option:\n1. Add Book\n2. Lists Books\n3. Register User\n4. List Users\n5. Lend user a book\n6. Exit\n");
         }
 
         public static void DisplayExistingSystem()
@@ -68,6 +68,27 @@ namespace LibraryManagementSystem.UI
             User newUser = new(userName, userId, []);
             library.AddUser(newUser);
             Console.WriteLine($"\nUser registered successfully! User ID: {userId}\n");
+        }
+        public static bool UsersExists(Library library)
+        {
+            if (library.Users.Count == 0)
+            {
+                Console.WriteLine("No users are registered in the system. Please register a user first.\n");
+                return false;
+            }
+
+            return true;
+        }
+
+        public static bool BooksExists(Library library)
+        {
+            if (library.Books.Count == 0)
+            {
+                Console.WriteLine("No books are registered in the system. Please register a book first.\n");
+                return false;
+            }
+
+            return true;
         }
     }
 }

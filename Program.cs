@@ -38,18 +38,40 @@ namespace LibrarayManagementSystem
                         break;
                     case "4":
                         Console.WriteLine("Listing Users...\n");
+                        Menu.UsersExists(library);
                         library.ListUsers();
                         Menu.DisplayMainMenu();
                         selectedOption = Console.ReadLine();
                         break;
                     case "5":
+                        Console.WriteLine("Lending user a book...\n");
+                        // Checking if there are atleast one user & book in the system.
+                        bool usersExists = Menu.UsersExists(library);
+                        bool booksExists = Menu.BooksExists(library);
+
+                        if (!usersExists || !booksExists)
+                        {
+                            Menu.DisplayMainMenu();
+                            selectedOption = Console.ReadLine();
+                            break;
+                        }
+
+                        // Only lending the first book to the first user for simplicity.
+                        library.LendUserBook(library.Users[0], library.Books[0]);
+                        Menu.DisplayMainMenu();
+                        selectedOption = Console.ReadLine();
+                        break;
+                    case "6":
                         Menu.DisplayExistingSystem();
                         break;
                     default:
                         Console.WriteLine("Invalid option selected. Please try again.");
+                        Menu.DisplayMainMenu();
+                        selectedOption = Console.ReadLine();
+
                         break;
                 }
-            } while (selectedOption != "5");
+            } while (selectedOption != "6");
 
 
             Menu.DisplayExistingSystem();

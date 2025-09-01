@@ -5,8 +5,7 @@ namespace LibraryManagementSystem.Models
         public string Name { get; } = name;
         public int UserId { get; } = userId;
         public List<Book> BorrowedBooks { get; set; } = borrowedBooks;
-        public List<Book> MyBooks { get; } = [];
-
+        // public List<Book> MyBooks { get; } = []
 
     }
 }
