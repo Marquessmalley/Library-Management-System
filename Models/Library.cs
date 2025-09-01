@@ -16,10 +16,37 @@ namespace LibraryManagementSystem.Models
         public void ListBooks()
         {
 
+            if (Books.Count == 0)
+            {
+                Console.WriteLine("No books available in the library.\n");
+                return;
+            }
+
             Console.WriteLine("{0,-20} {1,-15} {2, -15} {3, -12}", "Title", "Author", "ISBN", "Checked Out\n");
             foreach (var book in Books)
             {
                 Console.WriteLine("{0,-20} {1,-15} {2,-15} {3,-12}", book.Title, book.Author, book.ISBN, book.IsBorrowed, "\n");
+            }
+        }
+
+        public void AddUser(User user)
+        {
+            Users.Add(user);
+        }
+
+        public void ListUsers()
+        {
+
+            if (Users.Count == 0)
+            {
+                Console.WriteLine("No users are registered in the system.\n");
+                return;
+            }
+            Console.WriteLine("{0,-20} {1,-15} {2, -15}", "Name", "User ID", "Borrowed Books\n");
+            foreach (var user in Users)
+            {
+                IEnumerable<string> borrowedBookTitles = user.BorrowedBooks.Select(b => b.Title);
+                Console.WriteLine("{0,-20} {1,-15} {2,-15}", user.Name, user.UserId, borrowedBookTitles, "\n");
             }
         }
 
@@ -59,18 +86,5 @@ namespace LibraryManagementSystem.Models
             Books.Remove(book);
         }
 
-        public void AddUser(User user)
-        {
-            Users.Add(user);
-        }
-
-        public void ListUsers()
-        {
-            Console.WriteLine("{0,-20} {1,-15} {2, -15}", "Name", "User ID", "Borrowed Books\n");
-            foreach (var user in Users)
-            {
-                Console.WriteLine("{0,-20} {1,-15} {2,-15}", user.Name, user.UserId, user.BorrowedBooks, "\n");
-            }
-        }
     }
 }

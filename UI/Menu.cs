@@ -65,7 +65,7 @@ namespace LibraryManagementSystem.UI
                 return;
             }
 
-            User newUser = new(userName, userId, 0);
+            User newUser = new(userName, userId, []);
             library.AddUser(newUser);
             Console.WriteLine($"\nUser registered successfully! User ID: {userId}\n");
         }
