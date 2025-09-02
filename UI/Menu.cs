@@ -79,6 +79,21 @@ namespace LibraryManagementSystem.UI
 
             return true;
         }
+        public static User? FindUser(Library library, string userName)
+        {
+
+            var foundUser = library.Users.Find((u) => u.Name == userName);
+
+            return foundUser;
+        }
+
+        public static Book? FindBook(Library library, string bookTitle)
+        {
+
+            var foundBook = library.Books.Find((b) => b.Title == bookTitle);
+
+            return foundBook;
+        }
 
         public static bool BooksExists(Library library)
         {
@@ -90,5 +105,7 @@ namespace LibraryManagementSystem.UI
 
             return true;
         }
+
+
     }
 }

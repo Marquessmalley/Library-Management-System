@@ -25,7 +25,7 @@ namespace LibraryManagementSystem.Models
             Console.WriteLine("{0,-20} {1,-15} {2, -15} {3, -12}", "Title", "Author", "ISBN", "Checked Out\n");
             foreach (var book in Books)
             {
-                Console.WriteLine("{0,-20} {1,-15} {2,-15} {3,-12}", book.Title, book.Author, book.ISBN, book.IsBorrowed, "\n");
+                Console.WriteLine("{0,-20} {1,-15} {2,-15} {3,-12}\n", book.Title, book.Author, book.ISBN, book.IsBorrowed);
             }
         }
 
@@ -62,7 +62,7 @@ namespace LibraryManagementSystem.Models
 
 
 
-                Console.WriteLine("{0,-20} {1,-15} {2,-15}", user.Name, user.UserId, displayTitles, "\n");
+                Console.WriteLine("{0,-20} {1,-15} {2,-15}\n", user.Name, user.UserId, displayTitles);
             }
         }
 
@@ -77,7 +77,7 @@ namespace LibraryManagementSystem.Models
                 book.SetBorrowed();
                 user.BorrowedBooks.Add(book);
 
-                Console.WriteLine("User borrowed books: \n");
+                Console.Write("User borrowed books: \n");
                 foreach (var b in user.BorrowedBooks)
                 {
                     Console.WriteLine(b.Title);
@@ -87,12 +87,13 @@ namespace LibraryManagementSystem.Models
             else
             {
                 Console.WriteLine("User already has borrowed books, add another book\n");
+
                 UserBooks[user].Add(book);
                 book.SetBorrowed();
                 user.BorrowedBooks.Add(book);
 
                 // list their borrowed books
-                Console.WriteLine("User borrowed books: \n");
+                Console.Write("User borrowed books: \n");
                 foreach (var b in user.BorrowedBooks)
                 {
                     Console.WriteLine(b.Title);
